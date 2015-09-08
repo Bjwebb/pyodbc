@@ -45,7 +45,6 @@ class TagsCommand(Command):
     description = 'runs etags'
 
     user_options = []
-
     def initialize_options(self):
         pass
 
@@ -203,7 +202,7 @@ def get_compiler_settings(version_str):
             # For now target 10.7 to eliminate the warnings.
             settings['extra_compile_args'].append('-Wno-deprecated-declarations')
             settings['define_macros'].append( ('MAC_OS_X_VERSION_10_8',) )
-    print settings
+    _print(repr(settings))
     return settings
 
 

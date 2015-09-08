@@ -21,7 +21,7 @@ isVirtuoso(HDBC hdbc)
 bool
 isSPASQL(PyObject *pSql)
 {
-    char *query = PyString_AS_STRING(pSql);
+    char *query = PyBytes_AsString(pSql);
 
     if (!query)
 	return false;
